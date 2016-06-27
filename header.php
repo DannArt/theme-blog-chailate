@@ -40,10 +40,10 @@
 	<div id="myNav" class="overlay">
 	  <a href="#" class="closebtn">×</a>
 	  	<div class="overlay-content">
-		   	<form> 
-		   		<input type="text" placeholder="Buscar " > 
-		    	<button type="submit" ><span class="fa fa-search"></span></button>
-			</form>
+	  	<?php 
+	  		 if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('Sidebar')): endif;
+			 ?>
+		  
 		</div>
 	</div>
 

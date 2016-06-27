@@ -30,115 +30,47 @@
 							<h3>
 								Categorías
 							</h3>
+							
 							<ul class="center-block">
-								<li>
-									<a href="">	Diseño Web</a>
-									<span>
-										(1)
-									</span>
-								</li>
-								<hr>
-								<li>
-									<a href="">	Diseño Gráfico</a>
-									<span>
-										(4)
-									</span>
-								</li>
-								<hr>
-								<li>
-									<a href="">	Fotografía</a>
-									<span>
-										(4)
-									</span>
-								</li>
-								<hr>
+								<?php 
+									$variable = wp_list_categories('show_count=1&title_li=&echo=0'); 
+									$variable = str_replace( '(', '<span>(', $variable);
+									$variable = str_replace( ')', ' )</span><hr>', $variable);
+									echo $variable;
+								?>
 							</ul>
+							
 						</div>
 						<div class="post_recientes center-block">
 							<h3>
 								Post Recientes
+
 							</h3>
 							<ul >
-								<li>
+							<?php 
+								$args = array( 'numberposts' => '5' );
+								$recent_posts = wp_get_recent_posts( $args );
+								foreach( $recent_posts as $recent ):
+									$image_url = wp_get_attachment_url( get_post_thumbnail_id($recent["ID"]) );
+									
+									echo '<li>
 									<div>
-										<a href="#">
-											<img src="<?php bloginfo('stylesheet_directory'); ?>/img/blog1.jpg" alt="">
+										<a href="'. get_permalink($recent["ID"]) .'">
+												<img src="'. $image_url .'" alt="">
 										</a> 
 									</div>
 									<small>
-										May 25, 2015
+										'. mysql2date('M j Y', $recent["post_date"]) .'
 									</small>
 									<h5>
-										<a href="#">Mejora los ingresos de tu negocio teniendo un página web
+										<a href=". get_permalink($recent["ID"]) .">'.$recent["post_title"].'
 
 										</a>
 									</h5>
 									<div class="clear"></div>
-								</li>
-								<li>
-									<div>
-										<a href="#">
-											<img src="<?php bloginfo('stylesheet_directory'); ?>/img/blog5.jpg" alt="">
-										</a> 
-									</div>
-									<small>
-										May 25, 2015
-									</small>
-									<h5>
-										<a href="#">Mejora los ingresos de tu negocio teniendo un página web
-
-										</a>
-									</h5>
-									<div class="clear"></div>
-								</li>
-								<li>
-									<div>
-										<a href="#">
-											<img src="<?php bloginfo('stylesheet_directory'); ?>/img/blog3.jpg" alt="">
-										</a> 
-									</div>
-									<small>
-										May 25, 2015
-									</small>
-									<h5>
-										<a href="#">Mejora los ingresos de tu negocio teniendo un página web
-
-										</a>
-									</h5>
-									<div class="clear"></div>
-								</li>
-								<li>
-									<div>
-										<a href="#">
-											<img src="<?php bloginfo('stylesheet_directory'); ?>/img/blog4.jpg" alt="">
-										</a> 
-									</div>
-									<small>
-										May 25, 2015
-									</small>
-									<h5>
-										<a href="#">Mejora los ingresos de tu negocio teniendo un página web
-
-										</a>
-									</h5>
-									<div class="clear"></div>
-								</li>
-								<li>
-									<div>
-										<a href="#">
-											<img src="<?php bloginfo('stylesheet_directory'); ?>/img/blog2.jpg" alt="">
-										</a> 
-									</div>
-									<small>
-										May 25, 2015
-									</small>
-									<h5>
-										<a href="#">Mejora los ingresos de tu negocio teniendo un página web
-
-										</a>
-									</h5>
-									<div class="clear"></div>
-								</li>
+								</li>';
+								endforeach;
+							?>
 							</ul>
 						</div>
 					</div>

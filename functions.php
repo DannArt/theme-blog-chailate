@@ -56,7 +56,7 @@ add_action('wp_enqueue_scripts','load_scripts');
 	
  ?>
  
-<?php /*
+<?php 
 	function popularPosts($num) {
     global $wpdb;
     
@@ -92,18 +92,24 @@ add_action('wp_enqueue_scripts','load_scripts');
     return $popular;
 }
  ?>
- */
-
+<?php 
  add_theme_support('post-thumbnails');
  add_image_size('recientes',748,452, true);
- add_image_size('page',783,500, true);
+
+
   ?>
 
 <?php 
 
 	add_action( 'widgets_init', 'theme_slug_widgets_init' );
 	function theme_slug_widgets_init() {
-   
+   	  register_sidebar( array(
+        'name' => 'Sidebar',
+        'before_widget' => '<div class="widget-buscar ">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="center-block">',
+		'after_title'   => '</h4>',
+    ) );
      register_sidebar( array(
         'name' => 'Foot_Widget',
         'before_widget' => '<div class="col-lg-3  col-md-3 text-center col-sm-12">',

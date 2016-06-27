@@ -17,10 +17,12 @@
 								<div class="date">
 									<div class="date-content">
 										<div class="day">
-											05
+											<?php  $fecha = get_the_date('j'); 
+										 	 echo $fecha; ?>  
 										</div>
 										<div class="month">
-											Marzo, 2016
+											<?php  $fecha = get_the_date('M, Y'); 
+										 	 echo $fecha; ?> 
 										</div>
 									</div>
 								</div>
