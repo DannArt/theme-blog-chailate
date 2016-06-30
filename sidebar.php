@@ -43,8 +43,7 @@
 						</div>
 						<div class="post_recientes center-block">
 							<h3>
-								Post Recientes
-
+								Entradas Recientes
 							</h3>
 							<ul >
 							<?php 
@@ -63,7 +62,7 @@
 										'. mysql2date('M j Y', $recent["post_date"]) .'
 									</small>
 									<h5>
-										<a href=". get_permalink($recent["ID"]) .">'.$recent["post_title"].'
+										<a href="'. get_permalink($recent["ID"]) .'">'.$recent["post_title"].'
 
 										</a>
 									</h5>

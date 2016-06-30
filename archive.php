@@ -1,21 +1,19 @@
 <?php get_header(); ?>
-
-
 	<div id="blog">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8  col-md-8 col-sm-12">
 					<div class="borde">
-						<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-							$args = array('paged' => $paged );
-							query_posts($args); ?> 
+						<h1>
+							Resultados de búsqueda para <i><?php  single_cat_title($prefix = '', $display= true);?></i>.
+						</h1>
 						<?php 
 							if ( have_posts() ) : while ( have_posts() ) : the_post(); 
 						?>
 						<div class="content clearfix">
 							<div class="img-content">
 								<a href="<?php the_permalink(); ?>">
-									<?php if(has_post_thumbnail()) { the_post_thumbnail('recientes');} ?>
+									<?php if(has_post_thumbnail()) { the_post_thumbnail('recientes');}?>
 								</a>
 								<div class="date">
 									<div class="date-content">
@@ -60,11 +58,19 @@
 								<hr>
 							</div>
 						</div>
-					<?php endwhile; else: ?>
-				 	 <h1>No hay posts</h1>
-					<?php endif; ?>
+						<?php endwhile; else: ?>
+					 	 <h1>No hay posts</h1>
+						<?php endif; ?>
+						<div class="container-fluid ">
+				            <div class="pagination center-block ">
+				                <p class="center-block">  
+				                    <?php previous_posts_link('<i class="fa fa-arrow-left" aria-hidden="true"></i> Post anteriores')?>
+				                    <?php next_posts_link('Post siguientes <i class="fa fa-arrow-right" aria-hidden="true"></i>') ?> 
+				                </p>   
+				            </div>
+				    	</div>
 					</div>
-					</div>
-			<?php get_sidebar(); ?>
-
-	<?php get_footer(); ?>
+				</div>
+				
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>

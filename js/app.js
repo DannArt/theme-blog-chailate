@@ -10,5 +10,9 @@
     $("#searchform label").addClass('hide');
     $("#searchsubmit").addClass('hide');
     $("#searchform div").append('<button type="submit" ><span class="fa fa-search"></span></button>');
+    $(".pagination p a").addClass('center-block');
+    $("#single .texto p").addClass('center-block');
+     $("#fsb-social-bar").addClass('center-block');
+    $('[data-toggle="tooltip"]').tooltip();
 
 });

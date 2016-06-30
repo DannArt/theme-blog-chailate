@@ -60,6 +60,14 @@
 					<?php endwhile; else: ?>
 				 	 <h1>No hay posts</h1>
 					<?php endif; ?>
+						 <div class="container-fluid ">
+				            <div class="pagination center-block ">
+				                <p class="center-block">  
+				                    <?php previous_posts_link('<i class="fa fa-arrow-left" aria-hidden="true"></i> Post anteriores')?>
+				                    <?php next_posts_link('Post siguientes <i class="fa fa-arrow-right" aria-hidden="true"></i>') ?> 
+				                </p>   
+				            </div>
+			    		</div>
 					</div>
 					</div>
 
