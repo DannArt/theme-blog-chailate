@@ -80,6 +80,7 @@ add_action('wp_enqueue_scripts','load_scripts');
 	function theme_slug_widgets_init() {
    	  register_sidebar( array(
         'name' => 'Sidebar',
+        'id'            => 'sidebar-1',
         'before_widget' => '<div class="widget-buscar ">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="center-block">',
@@ -87,7 +88,9 @@ add_action('wp_enqueue_scripts','load_scripts');
     ) );
      register_sidebar( array(
         'name' => 'Foot_Widget',
+        'id'            => 'sidebar-2',
         'before_widget' => '<div class="col-lg-3  col-md-3 text-center col-sm-12">',
+
 		'after_widget'  => '</div>',
 		'before_title'  => '<h1>',
 		'after_title'   => '</h1>',
