@@ -5,7 +5,7 @@
 							<div class="content-about center-block">
 								<h4>Acerca de Chailate</h4>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu dui vitae tortor sagittis eleifend. Cras sit amet posuere metus. Sed aliquet eu libero sed convallis. 
+									Somos una agencia innovadora donde hacemos de nuestra pasión, el trabajo perfecto. 
 								</p>
 								<ul>
 									<li>
@@ -14,7 +14,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="">
+										<a href="https://www.facebook.com/chailateagencia">
 											<i class="fa fa-facebook" aria-hidden="true"></i>
 										</a>
 									</li>
@@ -34,7 +34,7 @@
 							<ul class="center-block">
 								<?php 
 									$variable = wp_list_categories('show_count=1&title_li=&echo=0'); 
-									$variable = str_replace( '(', '<span>(', $variable);
+									$variable = str_replace( '(', '<span>(' , $variable);
 									$variable = str_replace( ')', ' )</span><hr>', $variable);
 									echo $variable;
 								?>

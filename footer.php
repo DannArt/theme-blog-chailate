@@ -8,14 +8,14 @@
 				<ul class="center-block">
 					<li>
 						<i class="fa fa-map-marker" aria-hidden="true"></i>
-						#20 Av. Auge Ciudad Metus México
+						Emiliano Zapata 70, Cruz de Dendho, Jilotepec de Molina Enríquez, México
 					</li>
 					<li>
-						<i class="fa fa-phone" aria-hidden="true"></i>  555 - 654 - 789
+						<i class="fa fa-phone" aria-hidden="true"></i>  55 73 29 32 54
 
 					</li>
 					<li>
-						<i class="fa fa-envelope" aria-hidden="true"></i> chailate@gmail.com
+						<i class="fa fa-envelope" aria-hidden="true"></i> chailateagencia@gmail.com
 					</li>
 					<li>
 						<i class="fa fa-laptop" aria-hidden="true"></i> www.chailate.com 
@@ -46,7 +46,7 @@
 					ACERCA DE
 				</h1>
 				<p class="center-block">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus leo a elit tempus aliquet. Vestibulum vel nisi eget nibh molestie vestibulum ac at mi. Mauris ac arcu ut dui pellentesque elementum.
+					Somos una agencia innovadora donde hacemos de nuestra pasión, el trabajo perfecto. 
 				</p>
 			</div>
 		</div> <!-- /.row -->

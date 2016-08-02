@@ -3,13 +3,17 @@
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta property="fb:app_id" content="1649416852048714">
+	
+	<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/Favicon.png" />
 	<title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
 	<?php wp_head();   ?>
 </head>
 <body>
 	<div id="logo"  class="text-center">
 		<div >
-			<img src="<?php bloginfo('stylesheet_directory'); ?>/img/logoti.png" alt="">
+			<a href="http://chailate.com/blog/">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/img/logoti.png" alt="">
+			</a>
 		</div>
 	</div>
 	<nav class="navbar navbar-default">
