@@ -8,8 +8,7 @@ add_action( 'after_setup_theme', 'wpt_setup' );
 
 ?>
 <?php 	
-
-function load_scripts(){
+	function load_scripts(){
 
 	/* CARGA LA HOJA DE ESTILO PRINCIPAL*/
 
@@ -63,17 +62,7 @@ function load_scripts(){
 
 }
 add_action('wp_enqueue_scripts','load_scripts');
-	
  ?>
- 
-<?php 
-/* CARGA TAMAÑOS DE IMAGENES */
- add_theme_support('post-thumbnails');
- add_image_size('recientes',748,452, true);
- add_image_size('thumb',197,131, true);
-
- ?>
-
 <?php 
 /* WIDGETS SIDEBAR Y FOOT_WIDGET */
 	add_action( 'widgets_init', 'theme_slug_widgets_init' );
@@ -96,6 +85,9 @@ add_action('wp_enqueue_scripts','load_scripts');
 		'after_title'   => '</h1>',
     ) );
 }
-
 ?>
-
+<?php
+	add_theme_support('post-thumbnails');
+ 	add_image_size('recientes',748,452, true);
+ 	add_image_size('thumb',197,131, true);
+?>
