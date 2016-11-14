@@ -62,6 +62,12 @@ add_action( 'after_setup_theme', 'wpt_setup' );
 
 }
 add_action('wp_enqueue_scripts','load_scripts');
+	
+	/*Borra la versión de wordpress*/
+	function wpversion_remove_version() {
+	return '';
+	}
+	add_filter('the_generator', 'wpversion_remove_version');
  ?>
 <?php 
 /* WIDGETS SIDEBAR Y FOOT_WIDGET */
